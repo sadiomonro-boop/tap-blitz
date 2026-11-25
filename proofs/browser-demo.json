@@ -1,0 +1,6 @@
+{
+  "url": "https://sadiomonro-boop.github.io/tap-blitz/",
+  "steps": {},
+  "success": false,
+  "error": "Error: page.goto: net::ERR_TUNNEL_CONNECTION_FAILED at https://sadiomonro-boop.github.io/tap-blitz/\nCall log:\n  - navigating to \"https://sadiomonro-boop.github.io/tap-blitz/\", waiting until \"networkidle\"\n"
+}

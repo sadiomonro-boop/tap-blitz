@@ -14,8 +14,8 @@ import idl from "./idl/tap_blitz.json";
 // ---------------------------------------------------------------------------
 // Endpoints (all devnet — no real money anywhere in this app)
 // ---------------------------------------------------------------------------
-const BASE_RPC = "https://api.devnet.solana.com";
-const BASE_RPC_FALLBACK = "https://rpc.magicblock.app/devnet";
+const BASE_RPC = "https://rpc.magicblock.app/devnet"; // reliable devnet RPC (api.devnet.solana.com times out from some networks)
+const BASE_RPC_FALLBACK = "https://api.devnet.solana.com";
 const ER_DEFAULT = "https://devnet-us.magicblock.app";
 const ROUTER_RPC = "https://devnet-router.magicblock.app/";
 const DELEGATION_PROGRAM = new PublicKey(
