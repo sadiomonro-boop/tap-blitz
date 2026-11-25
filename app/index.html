@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tap Blitz — 30s tap race on a MagicBlock Ephemeral Rollup</title>
+  <meta name="description" content="Tap Blitz: a 30-second tap race on Solana devnet. Your game account is delegated to a MagicBlock Ephemeral Rollup for gasless 10ms taps, then committed back to Solana." />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <h1>⚡ Tap Blitz</h1>
+      <p class="sub">A 30-second tap race on a <strong>MagicBlock Ephemeral Rollup</strong> (Solana devnet).<br/>
+      Your game account is delegated to the ER for gasless, ~10&nbsp;ms taps — then the final score is committed back to Solana.</p>
+      <p class="badge">Solana Blitz v10 · Entertainment Finance · devnet only · $0 real money</p>
+    </header>
+
+    <section class="card" id="wallet-card">
+      <h2>1 · Wallet</h2>
+      <p id="wallet-line">No wallet yet. Demo mode creates a throwaway devnet keypair in your browser (funded free from the faucet). Nothing real is ever touched.</p>
+      <div class="row">
+        <button id="btn-demo-wallet">🎲 Create demo wallet + fund (devnet faucet)</button>
+        <button id="btn-phantom" class="ghost">Connect Phantom / Solflare</button>
+      </div>
+      <p class="mono small" id="wallet-addr"></p>
+      <p class="mono small" id="wallet-balance"></p>
+    </section>
+
+    <section class="card">
+      <h2>2 · Game</h2>
+      <div class="scoreboard">
+        <div><span class="label">SCORE</span><span class="big" id="score">0</span></div>
+        <div><span class="label">TIME LEFT</span><span class="big" id="time-left">30.0s</span></div>
+        <div><span class="label">TAPS / SEC</span><span class="big" id="tps">0.0</span></div>
+        <div><span class="label">BEST (on-chain)</span><span class="big" id="best">—</span></div>
+      </div>
+      <div class="progress"><div id="time-bar"></div></div>
+      <div class="row">
+        <button id="btn-init" disabled>Initialize game (base)</button>
+        <button id="btn-delegate" disabled>Delegate to ER</button>
+        <button id="btn-start" disabled>▶ Start round</button>
+        <button id="btn-finish" disabled>🏁 Finish &amp; commit to Solana</button>
+      </div>
+      <button id="btn-tap" disabled>👆 TAP!</button>
+      <p id="round-status" class="status">Press “Initialize game”, then “Delegate to ER”, then “Start round”.</p>
+    </section>
+
+    <section class="card">
+      <h2>3 · Ephemeral Rollup status</h2>
+      <dl class="kv">
+        <div><dt>Program</dt><dd class="mono" id="kv-program">—</dd></div>
+        <div><dt>Game PDA</dt><dd class="mono" id="kv-pda">—</dd></div>
+        <div><dt>Delegated</dt><dd id="kv-delegated">—</dd></div>
+        <div><dt>ER endpoint</dt><dd class="mono" id="kv-er">—</dd></div>
+        <div><dt>ER region</dt><dd id="kv-region">devnet-us (pinned validator)</dd></div>
+      </dl>
+    </section>
+
+    <section class="card">
+      <h2>4 · Proof — transactions</h2>
+      <ul id="tx-log" class="txlog">
+        <li class="dim">No transactions yet. Every step below links to Solana Explorer.</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p class="small dim">How it works: <b>initialize</b> creates your game PDA on Solana devnet → <b>delegate</b> locks it in the MagicBlock Delegation Program and clones it into the devnet-us Ephemeral Rollup → <b>taps</b> run as gasless ER transactions (~10&nbsp;ms blocks) → <b>finish</b> commits the final score back to devnet and undelegates. Program ID and source: see the repo linked below.</p>
+      <p class="small"><a id="repo-link" href="https://github.com/sadiomonro-boop/tap-blitz" target="_blank" rel="noopener">GitHub repo</a> · Built for Solana Blitz v10 (MagicBlock)</p>
+    </footer>
+  </main>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

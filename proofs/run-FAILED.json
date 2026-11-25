@@ -1,0 +1,7 @@
+{
+  "programId": "CAKp5hPGXYZVd3Hws51VtmvDHXeH2NpU1a12dMspCTrs",
+  "tapsPlanned": 10,
+  "steps": {},
+  "player": "3Si12MrWCfSif4oZFMjyqJ6uFoNik8VtsL1UXdLHcjcX",
+  "error": "TransactionExpiredBlockheightExceededError: Signature 5qWcTfhQHAySf1oo75ybfGKBtLLwFGh5DY7GtVGQB8sR5RkvfnBWtQwRX6kHgcMWpLzPrPrTu4292jjqAnMfzj86 has expired: block height exceeded."
+}

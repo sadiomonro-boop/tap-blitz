@@ -1,0 +1,19 @@
+[toolchain]
+anchor_version = "1.0.2"
+
+[features]
+resolution = true
+skip-lint = false
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "devnet"
+wallet = "~/.config/solana/id.json"
+
+[programs.devnet]
+tap_blitz = "CAKp5hPGXYZVd3Hws51VtmvDHXeH2NpU1a12dMspCTrs"
+
+[scripts]
+test = "yarn test"
