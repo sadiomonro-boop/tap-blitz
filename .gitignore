@@ -1,8 +1,0 @@
-target/
-node_modules/
-app/dist/
-app/node_modules/
-.DS_Store
-*.log
-app/src/main.js
-app/tsconfig.tsbuildinfo
